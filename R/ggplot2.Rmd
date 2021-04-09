@@ -1,6 +1,6 @@
 ---
 title: "Showing off some ggplot2 skills"
-author: "Team XX: Team member 1 and Team member 2."
+author: "Team 09: Matt McCoy and Cyrus Tadjiki"
 date: </br>`r format(Sys.time(), '%d %B %Y')`
 output: github_document
 ---
