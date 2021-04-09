@@ -60,7 +60,22 @@ Load/read in the data. (Delete this chunk if you don't need it.)
 ```{r data1}
 # library(readr)
 # cool_data = read_csv(here("data/my-cool-data.csv"))
+#Install Ecdata if not already installed as it contains the dataset.
+install.packages("Ecdat")
+#load packages
+p_load(Ecdat, dplyr)
+#load data
+data(Mathlevel)
 ```
+
+```{r}
+#summary statistics
+
+summary(Mathlevel)
+
+head(Mathlevel, n=10)
+```
+
 
 Briefly describe the data here. Then produce the figure.
 
