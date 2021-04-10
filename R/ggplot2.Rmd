@@ -77,6 +77,7 @@ tail(Mathlevel, n=5)
 Briefly describe the data here. Then produce the figure.
 **Here is my description**
 
+We found the data from the Vincent Arel-Bundock github, and it is located in the Ecdat package. This study collected data on the level of calculus that had been attained by students taking Advanced Microeconomics.  
 
 ```{r fig1}
 # Plot code here
@@ -88,4 +89,9 @@ Finally, tell me what I am looking at. Point out anything that you think is of i
 
 ```{r fig2}
 # Plot code here
+
+ggplot(Mathlevel) +
+  aes(x = sat, y = major, fill = major) +
+  geom_boxplot(outlier.color="red") 
+
 ```
