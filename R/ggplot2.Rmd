@@ -48,11 +48,13 @@ Here is a R code chunk for you to load your packages. Feel free to load as many 
 if (!require("pacman")) install.packages("pacman")
 #Install Ecdata if not already installed as it contains the dataset.
 if (!require("Ecdat")) install.packages("Ecdat")
+#Install gridExtra if not already installed as it contains the dataset.
+if (!require("gridExtra")) install.packages("gridExtra")
 ## Note: The `p_load()` function from the pacman package is a convenient way to 
 ## install (if necessary) and load packages all at once. You can think of this
 ## as an alternative to the normal `library(ggplot2); library(here);...` way of
 ## loading R packages.
-pacman::p_load(ggplot2, here, Ecdat, dplyr)
+pacman::p_load(ggplot2, here, Ecdat, dplyr, gridExtra)
 ```
 
 ```{r data1}
