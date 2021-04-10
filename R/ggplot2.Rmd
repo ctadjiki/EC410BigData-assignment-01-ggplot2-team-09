@@ -77,7 +77,6 @@ tail(Mathlevel, n=5)
 Briefly describe the data here. Then produce the figure.
 **Here is my description**
 
-
 ```{r fig1}
 # Plot code here
 ```
