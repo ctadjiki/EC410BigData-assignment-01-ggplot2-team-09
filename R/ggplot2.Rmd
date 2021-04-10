@@ -89,7 +89,7 @@ Language_plot <- ggplot(Mathlevel) +
   aes(y = mathlevel, x = sat, color = language) +
   geom_jitter() + labs(title="Creative Title for later", x = "X Varible", y = "Y Varible", fill = "Sex")
 
-plot_grid(Gender_plot, Language_plot, labels = "AUTO")
+grid.arrange(Gender_plot, Language_plot, ncol = 2)
 ```
 
 Finally, tell me what I am looking at. Point out anything that you think is of interest. Now do the same for Figs. 2 below...
