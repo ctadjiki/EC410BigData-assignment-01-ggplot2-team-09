@@ -72,15 +72,14 @@ head(Mathlevel, n=10)
 tail(Mathlevel, n=5)
 
 ```
-
-
-### Figure 1: Title description
-
-Briefly describe the data here. Then produce the figure.
+### **Description of Data**
 
 We found the data from the Vincent Arel-Bundock github, and it is located in the Ecdat package. This study collected data on the level of calculus that had been attained by students taking Advanced Microeconomics from 1983 to 1986. The students are also categorized by their major. It appears to have been a fairly small cross-sectional study as there are only 609 observations. 
 
-# Plot code here
+**Brief note on this data set:** 
+It was very frustrating making plots of data when the data set "MathLevel" and a important variable "mathlevel" had the same exact spelling and only on variation of the first letter being capitalized or not. R wasn't always sure what todo so I had to specify with the pipeline %>% occasionally. In the future I would've avoided this by making my own .csv and renaming the columns or mutating the data within R. 
+
+###  Fiqure 1: Distribution of forgien langue proficiency and sex with Math performance
 ```{r fig1}
 
 Gender_plot <- ggplot(Mathlevel) +
@@ -93,10 +92,11 @@ Gender_plot <- ggplot(Mathlevel) +
 Language_plot <- ggplot(Mathlevel) +
                   aes(y = mathlevel, x = sat, color = language) +
                   geom_jitter() + labs(title="Math Performance and Language", x = "SAT Math Score", y = "Highest Math Class Taken") +
-                  scale_color_discrete(name = "Foreign Language", labels = c("Yes", "No")) + 
+                  scale_color_discrete(name = "Foreign Language", labels = c("No", "Yes")) + 
                   theme_dark() +
                   theme(legend.position="bottom")
 ```
+
 
 ```{r}
 grid.arrange(Gender_plot, Language_plot, ncol = 2)

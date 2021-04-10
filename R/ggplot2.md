@@ -1,11 +1,7 @@
 Showing off some ggplot2 skills
 ================
 Team 09: Cyrus Tadjiki and Matt McCoy.
-<<<<<<< HEAD
-</br>09 April 2021
-=======
 </br>10 April 2021
->>>>>>> b67a2855e17288b2bf3e51206c0165bc4e6cff87
 
 ## Goal and requirements
 
@@ -19,31 +15,19 @@ assignment (e.g. repsosible for one figure each).
 
 Some additional points:
 
-<<<<<<< HEAD
   - You are free to use any dataset that comes in-built with base R, or
-=======
--   You are free to use any dataset that comes in-built with base R, or
->>>>>>> b67a2855e17288b2bf3e51206c0165bc4e6cff87
     bundled together with an external R package. See
     [here](https://vincentarelbundock.github.io/Rdatasets/datasets.html)
     for an impressive list.
 
-<<<<<<< HEAD
   - That being said, I would especially encourage you to use your own
     data.
     
       - I know we haven’t gotten to data importation yet, but take a
-=======
--   That being said, I would especially encourage you to use your own
-    data.
-
-    -   I know we haven’t gotten to data importation yet, but take a
->>>>>>> b67a2855e17288b2bf3e51206c0165bc4e6cff87
         look
         [here](https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio)
         if you need help. I would recommend that you install the
         **readr**, **read\_excel** and **haven** packages first, though.
-<<<<<<< HEAD
       - If your dataset isn’t proprietary (or isn’t being read directly
         off the web), please save it in the (empty) `data/` folder of
         this repo.
@@ -53,32 +37,16 @@ Some additional points:
     want you to try and use different geoms for each figure.
 
   - Any other **ggplot2** skills and add-ons like faceting, changing
-=======
-    -   If your dataset isn’t proprietary (or isn’t being read directly
-        off the web), please save it in the (empty) `data/` folder of
-        this repo.
-
--   You can use the same dataset for all four of your plots. Or you can
-    use a new dataset for each plot. Regardless of what you choose, I
-    want you to try and use different geoms for each figure.
-
--   Any other **ggplot2** skills and add-ons like faceting, changing
->>>>>>> b67a2855e17288b2bf3e51206c0165bc4e6cff87
     aesthetic scales or legends, using different themes (e.g. from the
     **ggthemes** package), animation, etc. are all welcome and
     encouraged.
 
-<<<<<<< HEAD
   - I want to *see* the code that produces the figures. (Don’t use
-=======
--   I want to *see* the code that produces the figures. (Don’t use
->>>>>>> b67a2855e17288b2bf3e51206c0165bc4e6cff87
     `echo=FALSE` in any of the code chunks, if that means anything to
     you.)
 
 ### What you will be graded on
 
-<<<<<<< HEAD
   - Are your figures clear? (e.g. lack of chart chunk, non-overlapping
     labels)
   - Are your figures compelling? (e.g. use an appropriate geom for the
@@ -92,21 +60,6 @@ Some additional points:
 
 Lastly, don’t forget to knit the assignment (click the “Knit” button, or
 press `Ctrl+Shift+K`) before submitting\!
-=======
--   Are your figures clear? (e.g. lack of chart chunk, non-overlapping
-    labels)
--   Are your figures compelling? (e.g. use an appropriate geom for the
-    insight that you want to convey)
--   Variation (I don’t want to see four line charts of the same dataset…
-    Be creative)
--   Did you read and follow my instructions (e.g. describe your data and
-    figures, show the code that produced the figures, include data in
-    the `/data` folder, etc)
--   etc.
-
-Lastly, don’t forget to knit the assignment (click the “Knit” button, or
-press `Ctrl+Shift+K`) before submitting!
->>>>>>> b67a2855e17288b2bf3e51206c0165bc4e6cff87
 
 ## Start the assignment
 
@@ -118,51 +71,29 @@ together at the top.)
 
 ``` r
 if (!require("pacman")) install.packages("pacman")
-```
-
-    ## Loading required package: pacman
-
-``` r
 #Install Ecdata if not already installed as it contains the dataset.
 if (!require("Ecdat")) install.packages("Ecdat")
+#Install gridExtra if not already installed as it contains the dataset.
+if (!require("gridExtra")) install.packages("gridExtra")
 ```
 
-    ## Loading required package: Ecdat
+    ## Loading required package: gridExtra
 
-<<<<<<< HEAD
-    ## Warning: package 'Ecdat' was built under R version 4.0.3
-
-    ## Loading required package: Ecfun
-
-    ## Warning: package 'Ecfun' was built under R version 4.0.3
-=======
-    ## Warning: package 'Ecdat' was built under R version 4.0.5
-
-    ## Loading required package: Ecfun
-
-    ## Warning: package 'Ecfun' was built under R version 4.0.5
->>>>>>> b67a2855e17288b2bf3e51206c0165bc4e6cff87
+    ## Warning: package 'gridExtra' was built under R version 4.0.5
 
     ## 
-    ## Attaching package: 'Ecfun'
+    ## Attaching package: 'gridExtra'
 
-    ## The following object is masked from 'package:base':
+    ## The following object is masked from 'package:dplyr':
     ## 
-    ##     sign
-
-    ## 
-    ## Attaching package: 'Ecdat'
-
-    ## The following object is masked from 'package:datasets':
-    ## 
-    ##     Orange
+    ##     combine
 
 ``` r
 ## Note: The `p_load()` function from the pacman package is a convenient way to 
 ## install (if necessary) and load packages all at once. You can think of this
 ## as an alternative to the normal `library(ggplot2); library(here);...` way of
 ## loading R packages.
-pacman::p_load(ggplot2, here, Ecdat, dplyr)
+pacman::p_load(ggplot2, here, Ecdat, dplyr, gridExtra)
 ```
 
 ``` r
@@ -220,13 +151,8 @@ tail(Mathlevel, n=5)
     ## 608      221b 710       no female   eco          2            0             1
     ## 609      221b 590       no female   oss          2            0             1
 
-### Figure 1: Title description
+### **Description of Data**
 
-Briefly describe the data here. Then produce the figure. **Here is my
-description**
-
-<<<<<<< HEAD
-=======
 We found the data from the Vincent Arel-Bundock github, and it is
 located in the Ecdat package. This study collected data on the level of
 calculus that had been attained by students taking Advanced
@@ -234,21 +160,41 @@ Microeconomics from 1983 to 1986. The students are also categorized by
 their major. It appears to have been a fairly small cross-sectional
 study as there are only 609 observations.
 
->>>>>>> b67a2855e17288b2bf3e51206c0165bc4e6cff87
+**Brief note on this data set:** It was very frustrating making plots of
+data when the data set “MathLevel” and a important variable “mathlevel”
+had the same exact spelling and only on variation of the first letter
+being capitalized or not. R wasn’t always sure what todo so I had to
+specify with the pipeline %\>% occasionally. In the future I would’ve
+avoided this by making my own .csv and renaming the columns or mutating
+the data within R.
+
+### Fiqure 1: Distribution of forgien langue proficiency and sex with Math performance
+
 ``` r
-# Plot code here
+Gender_plot <- ggplot(Mathlevel) +
+                aes(y = mathlevel, x = sat, color = sex) +
+                geom_jitter() + labs(title="Math Performance and Sex", x = "SAT Math Score", y = "Highest Math Class Taken") +
+                scale_color_discrete(name = "Sex", labels = c("Male", "Female")) + 
+                theme_dark() +
+                theme(legend.position="bottom")
+
+Language_plot <- ggplot(Mathlevel) +
+                  aes(y = mathlevel, x = sat, color = language) +
+                  geom_jitter() + labs(title="Math Performance and Language", x = "SAT Math Score", y = "Highest Math Class Taken") +
+                  scale_color_discrete(name = "Foreign Language", labels = c("No", "Yes")) + 
+                  theme_dark() +
+                  theme(legend.position="bottom")
 ```
+
+``` r
+grid.arrange(Gender_plot, Language_plot, ncol = 2)
+```
+
+![](ggplot2_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
 Finally, tell me what I am looking at. Point out anything that you think
 is of interest. Now do the same for Figs. 2 below…
 
-<<<<<<< HEAD
-### Figure 2: Title description
-
-``` r
-# Plot code here
-```
-=======
 ### Figure 2: Distribution of SAT Math scores By Major
 
 ``` r
@@ -272,4 +218,3 @@ outliers are highlighted as a red dot. It’s interesting that there are
 no outliers in the Humanities major, and they have the most compact
 distribution of scores. The spread of math scores is fairly symmetrical
 between group, and the data is not skewed in either direction.
->>>>>>> b67a2855e17288b2bf3e51206c0165bc4e6cff87
