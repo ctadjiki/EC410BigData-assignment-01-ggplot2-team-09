@@ -151,7 +151,7 @@ tail(Mathlevel, n=5)
     ## 608      221b 710       no female   eco          2            0             1
     ## 609      221b 590       no female   oss          2            0             1
 
-### **Description of Data**
+### **Description of Data:**
 
 We found the data from the Vincent Arel-Bundock github, and it is
 located in the Ecdat package. This study collected data on the level of
@@ -192,8 +192,23 @@ grid.arrange(Gender_plot, Language_plot, ncol = 2)
 
 ![](ggplot2_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
-Finally, tell me what I am looking at. Point out anything that you think
-is of interest. Now do the same for Figs. 2 below…
+## Description of **Figure 1**:
+
+I plotted two side-by-side geom\_jitter() plots to look and see if there
+is a trend between SAT Math Scores and highest level of math attained in
+College. I further more duplicated the plots and colored sex in the
+first one and foreign language proficiency in the other to see if these
+binary variables are clustered towards the top or bottom of these
+jitters. My parents really pushed me to take Spanish in middle school
+and told me it would help me be better rounded at math because the use
+the same hemisphere of the brain. I though that was nonsense and my
+plots help support that it was nonsense showing no cluster in language.
+Additionally, there are no clusters with Sex and math performance. I
+believe the reason we get three distributed chunks of observations is
+because of the different requirements of math for specific majors.
+Non-STEM majors most likely belong in the lowest chunk and Economics and
+Natural Science Majors most likely belong in the highest chunk due to
+those majors requiring the highest math requirements.
 
 ### Figure 2: Distribution of SAT Math scores By Major
 
