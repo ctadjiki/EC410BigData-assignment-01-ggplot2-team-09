@@ -92,6 +92,6 @@ Finally, tell me what I am looking at. Point out anything that you think is of i
 
 ggplot(Mathlevel) +
   aes(x = sat, y = major, fill = major) +
-  geom_boxplot(outlier.color="red") 
+  geom_boxplot(outlier.color="red") + labs(title = "SAT Math Score By Major", x = "SAT Math Score", y = "Major", fill = "Major") 
 
 ```
