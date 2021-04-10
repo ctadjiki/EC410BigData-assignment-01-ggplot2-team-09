@@ -173,7 +173,9 @@ description**
 We found the data from the Vincent Arel-Bundock github, and it is
 located in the Ecdat package. This study collected data on the level of
 calculus that had been attained by students taking Advanced
-Microeconomics.
+Microeconomics from 1983 to 1986. The students are also categorized by
+their major. It appears to have been a fairly small cross-sectional
+study as there are only 609 observations.
 
 ``` r
 # Plot code here
@@ -182,7 +184,7 @@ Microeconomics.
 Finally, tell me what I am looking at. Point out anything that you think
 is of interest. Now do the same for Figs. 2 below…
 
-### Figure 2: Title description
+### Figure 2: Distribution of SAT Math scores By Major
 
 ``` r
 # Plot code here
