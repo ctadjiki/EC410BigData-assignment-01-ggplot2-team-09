@@ -15,51 +15,51 @@ assignment (e.g. repsosible for one figure each).
 
 Some additional points:
 
-  - You are free to use any dataset that comes in-built with base R, or
+-   You are free to use any dataset that comes in-built with base R, or
     bundled together with an external R package. See
     [here](https://vincentarelbundock.github.io/Rdatasets/datasets.html)
     for an impressive list.
 
-  - That being said, I would especially encourage you to use your own
+-   That being said, I would especially encourage you to use your own
     data.
-    
-      - I know we haven’t gotten to data importation yet, but take a
+
+    -   I know we haven’t gotten to data importation yet, but take a
         look
         [here](https://support.rstudio.com/hc/en-us/articles/218611977-Importing-Data-with-RStudio)
         if you need help. I would recommend that you install the
         **readr**, **read\_excel** and **haven** packages first, though.
-      - If your dataset isn’t proprietary (or isn’t being read directly
+    -   If your dataset isn’t proprietary (or isn’t being read directly
         off the web), please save it in the (empty) `data/` folder of
         this repo.
 
-  - You can use the same dataset for all four of your plots. Or you can
+-   You can use the same dataset for all four of your plots. Or you can
     use a new dataset for each plot. Regardless of what you choose, I
     want you to try and use different geoms for each figure.
 
-  - Any other **ggplot2** skills and add-ons like faceting, changing
+-   Any other **ggplot2** skills and add-ons like faceting, changing
     aesthetic scales or legends, using different themes (e.g. from the
     **ggthemes** package), animation, etc. are all welcome and
     encouraged.
 
-  - I want to *see* the code that produces the figures. (Don’t use
+-   I want to *see* the code that produces the figures. (Don’t use
     `echo=FALSE` in any of the code chunks, if that means anything to
     you.)
 
 ### What you will be graded on
 
-  - Are your figures clear? (e.g. lack of chart chunk, non-overlapping
+-   Are your figures clear? (e.g. lack of chart chunk, non-overlapping
     labels)
-  - Are your figures compelling? (e.g. use an appropriate geom for the
+-   Are your figures compelling? (e.g. use an appropriate geom for the
     insight that you want to convey)
-  - Variation (I don’t want to see four line charts of the same dataset…
+-   Variation (I don’t want to see four line charts of the same dataset…
     Be creative)
-  - Did you read and follow my instructions (e.g. describe your data and
+-   Did you read and follow my instructions (e.g. describe your data and
     figures, show the code that produced the figures, include data in
     the `/data` folder, etc)
-  - etc.
+-   etc.
 
 Lastly, don’t forget to knit the assignment (click the “Knit” button, or
-press `Ctrl+Shift+K`) before submitting\!
+press `Ctrl+Shift+K`) before submitting!
 
 ## Start the assignment
 
@@ -164,7 +164,7 @@ study as there are only 609 observations.
 data when the data set “MathLevel” and a important variable “mathlevel”
 had the same exact spelling and only on variation of the first letter
 being capitalized or not. R wasn’t always sure what todo so I had to
-specify with the pipeline %\>% occasionally. In the future I would’ve
+specify with the pipeline %&gt;% occasionally. In the future I would’ve
 avoided this by making my own .csv and renaming the columns or mutating
 the data within R.
 
@@ -220,16 +220,26 @@ ggplot(Mathlevel) +
   geom_boxplot(outlier.color="red") + labs(title = "SAT Math Score Distribution By Major", x = "SAT Math Score", y = "Major", fill = "Major") 
 ```
 
-![](ggplot2_files/figure-gfm/fig2-1.png)<!-- --> This Boxplot depicts
-the distribution of SAT math scores within each of the majors. I was
-curious to see if there would be any correlation between specific majors
-and higher math scores. It does not appear that math scores influence
-what major someone picks as each major has a very similar distribution
-and interquartile range. The Natural Sciences does have an edge on the
-upper whisker indicating that their top 25% of scores are slightly
-higher. The Economics and Other majors had a slightly worse lower
-whisker score indicating there are slightly more low scores. The
-outliers are highlighted as a red dot. It’s interesting that there are
-no outliers in the Humanities major, and they have the most compact
-distribution of scores. The spread of math scores is fairly symmetrical
-between group, and the data is not skewed in either direction.
+![](ggplot2_files/figure-gfm/fig2-1.png)<!-- -->
+
+## Description of **Figure 2**:
+
+This Boxplot depicts the distribution of SAT math scores within each of
+the majors. I was curious to see if there would be any correlation
+between specific majors and higher math scores. Some majors are much
+more reliant on math than others, so I would expect these majors to put
+off students who have historically have not done well in math. It does
+not appear that math scores influence what major someone picks as each
+major has a very similar distribution and interquartile range. The
+Natural Sciences does have an edge on the upper whisker indicating that
+their top 25% of scores are slightly higher. The Economics and Other
+majors had a slightly worse lower whisker score indicating there are
+slightly more low scores. The outliers are highlighted as a red dot.
+It’s interesting that there are no outliers in the Humanities major, and
+they have the most compact distribution of scores. There are 11 outliers
+which makes up 1.8% of observations. I would expect the majors that
+don’t require much math to have more people with low scores. The spread
+of math scores is fairly symmetrical between group, and the data is not
+greatly skewed in either direction. The humanities and econ majors are
+slightly skewed left though. All the majors have medians that appear to
+be within 10-20 points and the same goes for the interquartile range.
