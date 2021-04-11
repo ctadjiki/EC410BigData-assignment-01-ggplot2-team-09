@@ -1,7 +1,7 @@
 Showing off some ggplot2 skills
 ================
 Team 09: Cyrus Tadjiki and Matt McCoy.
-</br>10 April 2021
+</br>11 April 2021
 
 ## Goal and requirements
 
@@ -226,14 +226,20 @@ ggplot(Mathlevel) +
 
 This Boxplot depicts the distribution of SAT math scores within each of
 the majors. I was curious to see if there would be any correlation
-between specific majors and higher math scores. It does not appear that
-math scores influence what major someone picks as each major has a very
-similar distribution and interquartile range. The Natural Sciences does
-have an edge on the upper whisker indicating that their top 25% of
-scores are slightly higher. The Economics and Other majors had a
-slightly worse lower whisker score indicating there are slightly more
-low scores. The outliers are highlighted as a red dot. It’s interesting
-that there are no outliers in the Humanities major, and they have the
-most compact distribution of scores. The spread of math scores is fairly
-symmetrical between group, and the data is not skewed in either
-direction.
+between specific majors and higher math scores. Some majors are much
+more reliant on math than others, so I would expect these majors to put
+off students who have historically have not done well in math. It does
+not appear that math scores influence what major someone picks as each
+major has a very similar distribution and interquartile range. The
+Natural Sciences does have an edge on the upper whisker indicating that
+their top 25% of scores are slightly higher. The Economics and Other
+majors had a slightly worse lower whisker score indicating there are
+slightly more low scores. The outliers are highlighted as a red dot.
+It’s interesting that there are no outliers in the Humanities major, and
+they have the most compact distribution of scores. There are 11 outliers
+which makes up 1.8% of observations. I would expect the majors that
+don’t require much math to have more people with low scores. The spread
+of math scores is fairly symmetrical between group, and the data is not
+greatly skewed in either direction. The humanities and econ majors are
+slightly skewed left though. All the majors have medians that appear to
+be within 10-20 points and the same goes for the interquartile range.
