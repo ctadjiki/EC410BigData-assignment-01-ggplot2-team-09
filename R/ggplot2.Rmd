@@ -115,4 +115,6 @@ ggplot(Mathlevel) +
   geom_boxplot(outlier.color="red") + labs(title = "SAT Math Score Distribution By Major", x = "SAT Math Score", y = "Major", fill = "Major") 
 
 ```
+
+## Description of **Figure 2**:
 This Boxplot depicts the distribution of SAT math scores within each of the majors. I was curious to see if there would be any correlation between specific majors and higher math scores. It does not appear that math scores influence what major someone picks as each major has a very similar distribution and interquartile range. The Natural Sciences does have an edge on the upper whisker indicating that their top 25% of scores are slightly higher. The Economics and Other majors had a slightly worse lower whisker score indicating there are slightly more low scores. The outliers are highlighted as a red dot. It's interesting that there are no outliers in the Humanities major, and they have the most compact distribution of scores. The spread of math scores is fairly symmetrical between group, and the data is not skewed in either direction.     
