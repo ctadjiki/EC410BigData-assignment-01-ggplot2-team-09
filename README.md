@@ -36,3 +36,5 @@ ggplot2
 - [Chapter 3](https://r4ds.had.co.nz/data-visualisation.html) of *R for Data Science* by Hadley Wickham and Garett Grolemund.
 - [*Data Visualization: A Practical Guide*](https://socviz.co/makeplot.html) by Kieran Healy.
 - [Designing ggplots ](https://designing-ggplots.netlify.com/) by Malcom Barrett.
+
+GRADE: A. Ftr, you can rename the columns even in a prepakcaged dataset. 
