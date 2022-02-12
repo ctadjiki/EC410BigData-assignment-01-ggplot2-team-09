@@ -1,7 +1,6 @@
 # Assignment 1: ggplot2
 
-### The best way to view this project is the html file [here](https://raw.githack.com/cyrustadjiki/EC410BigData-assignment-01-ggplot2-team-09
-/master/ggplot2.md)
+### The best way to view this project is the html file [here](https://raw.githack.com/cyrustadjiki/EC410BigData-assignment-01-ggplot2-team-09/master/ggplot2.md)
 
 This repo contains starter code for your first assignment, which is simply to practice and show off some of your newly acquired **ggplot2** skills. The main goal of the assignment is for you to practice collaboration and assignment submission via GitHub Classroom.
 
